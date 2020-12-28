@@ -1,0 +1,317 @@
+@charset "UTF-8";
+/*
+* ---Base---
+*/
+html {
+  font-size: 62.5%;
+}
+body {
+  /* background: #151515 url('../images/bg.jpg') no-repeat fixed left bottom; */
+    background-size: cover;
+  color: #333;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
+  font-family: 'Sriracha', cursive;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/*
+* ---Base---
+*/
+header {
+  padding: 170px 30px 80px;
+  background-color: #E1F7FA;
+}
+.site-title-sub {
+  margin: 0 0 30px;
+  letter-spacing: 1px;
+  font-size: 2.2rem;
+}
+.site-title-sub::before,
+.site-title-sub::after {
+  content: '';
+  display: inline-block;
+  width: 140px;
+  height: 2px;
+  margin: 0 30px;
+  background-color: #000000;
+  vertical-align: middle;
+}
+.site-title {
+  margin: 50px 0 40px;
+  font-size: 7.6rem;
+}
+.site-description {
+  margin-bottom: 50px;
+   color: #000000;
+   font-size: 1.6rem;
+}
+.button {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  margin-bottom: 2.5%;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.account-text {
+  font-size: 2rem;
+  padding-right: 30px;
+}
+
+.heading {
+  text-align: center;
+  padding: 1em;
+  border: 3px solid #ccc;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+
+  font-size: 4rem;
+  text-shadow: 1px 1px 2px silver;
+  font-weight: bold;
+  letter-spacing: 1.5rem;
+}
+
+/*-------------------------------
+｜           newGame
+---------------------------------*/
+.about {
+  padding: 3% 80px 30px;
+  background-color: #FFFFFF;
+}
+.about-text {
+  padding-top: 2%;
+  width: 100%;
+  height: 200px;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  color: #000000;
+}
+
+/*-------------------------------
+｜           newGame
+---------------------------------*/
+.newgame {
+  padding: 30px 20px;
+  background-color: #E1F7FA;
+}
+.newGameBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align:  center;
+}
+.newGameBox .gameBox{
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  border-bottom: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+
+  width: 300px;
+}
+.newGame-gametitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.newGame-info {
+  padding-top: 3%;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.gameBox img {
+  width: 100%;
+  height: auto;
+}
+.gameBox a:hover {
+  color : #ff7043;
+  text-decoration: none;
+}
+/*-------------------------------
+｜           Ranking
+---------------------------------*/
+.ranking {
+  padding: 3% 2% ;
+  background-color: #FFFFFF;
+}
+.rankingBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align:  center;
+}
+.rankingBox .gameBox{
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  border-bottom: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+
+  width: 300px;
+}
+.ranking-gametitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ranking-info {
+  padding-top: 3%;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.ranking img {
+  width: 100%;
+  height: auto;
+}
+.ranking a:hover {
+  color : #ff7043;
+  text-decoration: none;
+}
+
+/*-------------------------------
+｜           Contents
+---------------------------------*/
+.contents {
+  padding: 80px 0;
+  background-color: #E1F7FA;
+  color: #333;
+}
+.contents-wrapper {
+  display: table;
+  width: 80%;
+  margin: 50px auto 0;
+  table-layout: fixed;
+}
+.contents-box {
+  display: table-cell;
+}
+.contents-icon {
+  width: 150px;
+  height: 150px;
+  color: #000000;
+  font-size: 8rem;
+  line-height: 142px;
+  margin-top: 20px;
+}
+.contents-title {
+  margin: 0 20px 20px;
+  font-size: 2rem;
+}
+.contents-text {
+  margin: 0 20px;
+  line-height: 2;
+}
+
+/*-------------------------------
+｜           Footer
+---------------------------------*/
+
+.footer {
+  width: 100%;
+  height: 100px;
+  padding-top: 30px;
+  background-color: #FFFFFF;
+}
+
+
+/*
+* Media Print ResponsiveSite
+*/
+@@media (max-width: 1024px) {
+  body {
+    background-image: none;
+  }
+}
+@media (max-width: 768px) {
+
+  .site-title-sub::before,
+  .site-title-sub::after {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+  }
+  .site-title-sub {
+    font-size: 1.7rem;
+  }
+  .site-title {
+    margin-top: 35px;
+    font-size: 5rem;
+  }
+  .header {
+    padding-top: 60px;
+  }
+  .button:hover {
+    opacity: 1;
+  }
+  .heading {
+    font-size: 2.5rem;
+  }
+  body {
+    font-size: 1.3rem;
+  }
+  .about-text {
+    line-height: 1.8;
+  }
+  .container-fluid {
+    width: 100%;
+    height: 200%;
+  }
+  .works-wrapper,
+  .work-box {
+    display: block;
+  }
+  .work-image {
+    display: none;
+  }
+  .work-description {
+    position: relative;
+  }
+  .work-box::after {
+    top: 0;
+    height: 100%;
+    background-size: cover;
+    transform: none;
+  }
+  .row{
+    display: flex;
+  }
+  .contents-wrapper,
+  .contents-box {
+    display: block;
+  }
+  .contents-icon {
+    width: 100px;
+    height: 100px;
+    font-size: 5rem;
+    line-height: 92px;
+  }
+  .contents-box {
+    margin: 40px auto;
+  }
+  .contents-text {
+    margin: 0;
+  }
+
+  .contact-form {
+    width: 80%;
+  }
+  .contact {
+    padding-bottom: 80px;
+  }
+}
