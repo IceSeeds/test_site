@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/*----------------------
+|      PC / タブレット
+-----------------------*/
+@media screen and (min-width: 767px)/*ウィンドウ幅が767px以上の場合に適用*/
+{
+  header {
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  header .headline{
+    font-size: 32px;
+  }
+  .nav-list {
+    position: relative;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 auto;
+  }
+  .nav-list-item {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+  }
+  .nav-list-item-account {
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+    list-style: none;
+  }
+
+  #nav-open {
+    display:none;
+  }
+  #nav-input {
+    display: none;
+  }
+  .logo-area {
+    display: none;
+  }
+}
+
+/*-------------------
+|       スマホ
+----------------------*/
+@media screen and (max-width: 767px)  /*ウィンドウ幅が最大767pxまでの場合に適用*/
+{
+
+    header {
+      padding: 10px 10px;
+      background: #E1F7FA;
+    }
+
+    #nav-drawer {
+      position: relative;
+    }
+
+    /*チェックボックス等は非表示に*/
+    .nav-unshown {
+      display:none;
+    }
+
+    /*アイコンのスペース*/
+    #nav-open {
+      display: inline-block;
+      width: 30px;
+      height: 22px;
+      vertical-align: middle;
+    }
+
+    /*ハンバーガーの形をCSSで表現*/
+    #nav-open span, #nav-open span:before, #nav-open span:after {
+      position: absolute;
+      height: 3px;/*線の太さ*/
+      width: 25px;/*長さ*/
+      border-radius: 3px;
+      background: #555;
+      display: block;
+      content: '';
+      cursor: pointer;
+    }
+    #nav-open span:before {
+      bottom: -8px;
+    }
+    #nav-open span:after {
+      bottom: -16px;
+    }
+
+    /*閉じる用の薄黒箇所*/
+    #nav-close {
+      display: none;
+      position: fixed;
+      z-index: 99;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: 0;
+      transition: .3s ease-in-out;
+    }
+
+    /*メニューの中身*/
+    #nav-content {
+      overflow: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      width: 90%;
+      max-width: 330px;/*最大幅（お好みで調整を）*/
+      height: 100%;
+      background: #fff;
+      transition: .3s ease-in-out;
+      -webkit-transform: translateX(-105%);
+      transform: translateX(-105%);
+    }
+
+    /*チェックがついたら表示させる*/
+    #nav-input:checked ~ #nav-close {
+      display: block;
+      opacity: .5;
+    }
+
+    #nav-input:checked ~ #nav-content {
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+      box-shadow: 6px 0 25px rgba(0,0,0,.15);
+    }
+
+    .header-logo-menu{
+     display: flex;
+     display: -moz-flex;
+     display: -o-flex;
+     display: -webkit-flex;
+     display: -ms-flex;
+     flex-direction: row;
+     -moz-flex-direction: row;
+     -o-flex-direction: row;
+     -webkit-flex-direction: row;
+     -ms-flex-direction: row;
+    }
+
+    /*ロゴやサイトタイトルをセンタリング*/
+    .logo-area{
+      text-align:center;
+      margin:auto;
+
+      font-size:2.3em;
+    	text-align:center;
+    	line-height:0.95em;
+    	font-weight:bold;
+    	color: transparent;
+    	background: repeating-linear-gradient( 90deg, #000000 0 0.1em, #E1F7FA 0.1em 0.2em );
+    	-webkit-background-clip: text;
+    }
+
+}

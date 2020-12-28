@@ -1,0 +1,12 @@
+.db-comment {
+  border-bottom: solid 1px #000000;
+}
+
+.comment-main {
+  font-size: 1.5rem;
+}
+
+.send-comment{
+  background-color: gray;
+  padding: 2%;
+}
